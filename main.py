@@ -1,9 +1,7 @@
 from owlready2 import *
 
+# Para o correto funcionamento deste script, deve existir um arquivo ontologia-prov.owl vazio no diretório /ontologia
 
-# onto_path.append("ontologia")
-# onto = get_ontology("ontologia/prov.owl")
-# onto.load()
 
 onto = get_ontology('ontologia/ontologia-prov.owl').load()
 
