@@ -1,7 +1,7 @@
 from owlready2 import *
+import yake
 
 # Para o correto funcionamento deste script, deve existir um arquivo ontologia-prov.owl vazio no diretório /ontologia
-
 
 onto = get_ontology('ontologia/ontologia-prov.owl').load()
 
@@ -17,7 +17,22 @@ with onto:
     
     onto.save(file = "ontologia/ontologia-prov.owl")
     
+    class OriginalFile(Entity):
+        pass
+
     class Metadata(Entity):
+        pass
+
+    class OilWell(Entity):
+        pass
+
+    class Table(Entity):
+        pass
+
+    class Chart(Entity):
+        pass
+
+    class Image(Entity):
         pass
     
     class wasDerivedFrom(ObjectProperty):
@@ -44,61 +59,83 @@ with onto:
         domain   = [Entity]
         range    = [Metadata]
 
+text = "Exemplo de Poço de petróleo desativado localizado em são paulo"
+language = "pt-br"
+max_ngram_size = 1
+deduplication_thresold = 0.9
+deduplication_algo = 'seqm'
+windowSize = 1
+numOfKeywords = 4
+
+custom_kw_extractor = yake.KeywordExtractor(lan=language, n=max_ngram_size, dedupLim=deduplication_thresold, dedupFunc=deduplication_algo, windowsSize=windowSize, top=numOfKeywords, features=None)
+keywords = custom_kw_extractor.extract_keywords(text)
 
 
 agent0 = Agent("pdf-extractor-v2")
 activity0 = Activity("extract-data")
 activity0.wasAssociatedWith = [agent0]
 
-entity1 = Entity("file1.pdf")
-entity1.wasAttributedTo = [agent0]
+originalfile1                   = OriginalFile("file1.pdf")
+originalfile1.wasAttributedTo   = [agent0]
 
-entity11 = Entity("table11.jpg")
-entity11.wasDerivedFrom = [entity1]
+table1                  = Table("table11.jpg")
+table1.wasDerivedFrom   = [originalfile1]
 
+originalfile2                   = OriginalFile("file2.pdf")
+originalfile2.wasAttributedTo   = [agent0]
 
-
-entity2 = Entity("file2.pdf")
-entity2.wasAttributedTo = [agent0]
-
-entity21 = Entity("table21.jpg")
-entity21.wasDerivedFrom = [entity2]
+table2                  = Table("table21.jpg")
+table2.wasDerivedFrom   = [originalfile2]
 
 
-entity3 = Entity("file3.pdf")
-entity3.wasAttributedTo = [agent0]
+originalfile3                   = OriginalFile("file3.pdf")
+originalfile3.wasAttributedTo   = [agent0]
 
-entity31 = Entity("table31.jpg")
-entity31.wasDerivedFrom = [entity3]
-
-
-entity4 = Entity("file4.pdf")
-entity4.wasAttributedTo = [agent0]
-
-entity41 = Entity("table41.jpg")
-entity42 = Entity("img42.jpg")
-entity41.wasDerivedFrom = [entity4]
-entity42.wasDerivedFrom = [entity4]
+table3                  = Table("table31.jpg")
+table3.wasDerivedFrom   = [originalfile3]
 
 
-entity5 = Entity("file5.pdf")
-entity5.wasAttributedTo = [agent0]
+originalfile4                   = OriginalFile("file4.pdf")
+originalfile4.wasAttributedTo   = [agent0]
 
-entity51 = Entity("table51.jpg")
-entity52 = Entity("img52.jpg")
-entity53 = Entity("chart53.jpg")
-entity54 = Entity("table54.jpg")
-entity51.wasDerivedFrom = [entity5]
-entity52.wasDerivedFrom = [entity5]
-entity53.wasDerivedFrom = [entity5]
-entity54.wasDerivedFrom = [entity5]
-
-metadata1 = Metadata("disable")
-entity54.hasMetadata = [metadata1]
+table4 = Table("table41.jpg")
+image1 = Image("img42.jpg")
+table4.wasDerivedFrom = [originalfile4]
+image1.wasDerivedFrom = [originalfile4]
 
 
+originalfile5 = OriginalFile("file5.pdf")
+originalfile5.wasAttributedTo = [agent0]
 
-onto.save(file = "ontologia/ontologia-prov.owl")
+table5 = Table("table51.jpg")
+image2 = Image("img52.jpg")
+chart1 = Chart("chart53.jpg")
+table6 = Table("table54.jpg")
+table5.wasDerivedFrom = [originalfile5]
+image2.wasDerivedFrom = [originalfile5]
+chart1.wasDerivedFrom = [originalfile5]
+table6.wasDerivedFrom = [originalfile5]
+
+print(len(keywords))
+index = 0
+while index < len(keywords):
+    # metadata1 = Metadata("disable")
+    metadata1 = Metadata("disable")
+    table6.hasMetadata = [metadata1]
+    onto.save(file = "ontologia/ontologia-prov.owl")
+    index += 1
+
+# for(i = 0; i<= len(keywords); i++):
+#     print(kw)
+#     metadata1 = Metadata(kw[1])
+#     table6.hasMetadata = [metadata1]
+#     onto.save(file = "ontologia/ontologia-prov.owl")
+
+
+
+# onto.save(file = "ontologia/ontologia-prov.owl")
+
+
 # onto.save(file = "prov.owl", format = "rdfxml")
 
 # entity = onto.Entity("entidade1")
