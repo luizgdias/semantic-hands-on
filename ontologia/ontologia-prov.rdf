@@ -1,0 +1,403 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#"
+     xml:base="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:obda="https://w3id.org/obda/vocabulary#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#hasMetadata -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#hasMetadata">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Metadata"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#hasSimilar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#hasSimilar"/>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#used -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#used">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#wasAssociatedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#wasAssociatedWith">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Activity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#wasAttributedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#wasAttributedTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#wasDerivedFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#wasDerivedFrom">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#wasGeneratedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#wasGeneratedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Activity">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Agent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Agent">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Chart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Chart">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Entity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Entity">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Image -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Image">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Metadata -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Metadata">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#OilWell -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#OilWell">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#OriginalFile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#OriginalFile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Table -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Table">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#chart53.jpg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#chart53.jpg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Chart"/>
+        <wasDerivedFrom rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#file5.pdf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#desativado -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#desativado">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Metadata"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#extract-data -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#extract-data">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Activity"/>
+        <wasAssociatedWith rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#pdf-extractor-v2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#file1.pdf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#file1.pdf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#OriginalFile"/>
+        <wasAttributedTo rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#pdf-extractor-v2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#file2.pdf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#file2.pdf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#OriginalFile"/>
+        <wasAttributedTo rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#pdf-extractor-v2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#file3.pdf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#file3.pdf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#OriginalFile"/>
+        <wasAttributedTo rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#pdf-extractor-v2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#file4.pdf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#file4.pdf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#OriginalFile"/>
+        <wasAttributedTo rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#pdf-extractor-v2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#file5.pdf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#file5.pdf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#OriginalFile"/>
+        <wasAttributedTo rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#pdf-extractor-v2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#img42.jpg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#img42.jpg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Image"/>
+        <wasDerivedFrom rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#file4.pdf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#img52.jpg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#img52.jpg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Image"/>
+        <wasDerivedFrom rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#file5.pdf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#janeiro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#janeiro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Metadata"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#pdf-extractor-v2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#pdf-extractor-v2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Agent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#petróleo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#petróleo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Metadata"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#poco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#poco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Metadata"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#rio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#rio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Metadata"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#riodejaneiro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#riodejaneiro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Metadata"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#similar_table54_1.jpg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#similar_table54_1.jpg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Table"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#similar_table54_2.jpg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#similar_table54_2.jpg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Table"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#similar_table54_3.jpg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#similar_table54_3.jpg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Table"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#table11.jpg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#table11.jpg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Table"/>
+        <wasDerivedFrom rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#file1.pdf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#table21.jpg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#table21.jpg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Table"/>
+        <wasDerivedFrom rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#file2.pdf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#table31.jpg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#table31.jpg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Table"/>
+        <wasDerivedFrom rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#file3.pdf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#table41.jpg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#table41.jpg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Table"/>
+        <wasDerivedFrom rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#file4.pdf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#table51.jpg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#table51.jpg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Table"/>
+        <wasDerivedFrom rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#file5.pdf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#table54.jpg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#table54.jpg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#Table"/>
+        <hasMetadata rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#desativado"/>
+        <hasMetadata rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#petróleo"/>
+        <hasMetadata rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#poco"/>
+        <hasMetadata rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#riodejaneiro"/>
+        <hasSimilar rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#similar_table54_1.jpg"/>
+        <hasSimilar rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#similar_table54_2.jpg"/>
+        <hasSimilar rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#similar_table54_3.jpg"/>
+        <wasDerivedFrom rdf:resource="http://www.semanticweb.org/lmdc/ontologies/2019/10/untitled-ontology-38#file5.pdf"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

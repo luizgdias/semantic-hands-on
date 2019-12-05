@@ -34,8 +34,8 @@ def create_ontology(ontology):
         class Metadata(Entity):
             pass
 
-        class OilWell(Entity):
-            pass
+        # class OilWell(Entity):
+        #     pass
 
         class Table(Entity):
             pass
@@ -69,6 +69,19 @@ def create_ontology(ontology):
         class hasMetadata(ObjectProperty):
             domain   = [Entity]
             range    = [Metadata]
+        
+        class hasSimilar(ObjectProperty):
+            domain   = [Entity]
+            range    = [Metadata]
+        
+        class isMetadata(ObjectProperty):
+            domain   = [Metadata]
+            range    = [Entity]
+        
+        class derived(ObjectProperty):
+            domain   = [OriginalFile]
+            range    = [Metadata]
+
 
     ontology.save(file = "ontologia/ontologia-prov.owl")
     print("| **** Creating classes and properties: Done")
@@ -88,6 +101,7 @@ def create_instances_and_links(onto):
 
     table1                  = onto.Table("table11.jpg")
     table1.wasDerivedFrom   = [originalfile1]
+    originalfile1.derived   = [table1]
 
     originalfile2                   = onto.OriginalFile("file2.pdf")
     originalfile2.wasAttributedTo   = [agent0]
@@ -119,16 +133,27 @@ def create_instances_and_links(onto):
     image2 = onto.Image("img52.jpg")
     chart1 = onto.Chart("chart53.jpg")
     table6 = onto.Table("table54.jpg")
+    table7 = onto.Table("similar_table54_1.jpg")
+    table8 = onto.Table("similar_table54_2.jpg")
+
+    table6 = onto.Table("table54.jpg")
     table5.wasDerivedFrom = [originalfile5]
     image2.wasDerivedFrom = [originalfile5]
     chart1.wasDerivedFrom = [originalfile5]
+    originalfile1.derived.append(chart1)
     table6.wasDerivedFrom = [originalfile5]
+
+    table7.wasDerivedFrom = [originalfile1]
+    table8.wasDerivedFrom = [originalfile3]
+
+    table6.hasSimilar = [table7]
+    table6.hasSimilar.append(table8)
 
     ###################################################################### 
     # Definindo um exemplo de metadado
     ###################################################################### 
 
-    text = "Exemplo de poco de petróleo desativado localizado em Rio_de_Janeiro"
+    text = "Exemplo de poco de petróleo desativado localizado no RiodeJaneiro"
     keywords = add_metadata(text)
     ####################################################################### 
     # Definindo metadados
